@@ -23,4 +23,22 @@ Or for **Powershell**:
 `(Get-Item test.txt).creationtime=$(Get-Date "12/12/2012 12:12 am")
 `(Get-Item test.txt).lastaccesstime=$(Get-Date "12/12/2012 12:12 am")
 
+Edit timestamp with Metasploit timestomp :
+meterpreter > timestomp -h
+print the help for timestomp
+
+meterpreter > timestomp C:\\ -r
+blank the timestamp recursively of a folder (here the C: drive)
+
+##### Securing Hard-drive 
+###### Data about connected devices
+`dmesg | grep sda`
+print the kernel messages (kernel ring buffer) with the word sda (meaning the drive number "a")
+
+`modprobe usbmon`
+Loads the usbmon kernel module to enable USB traffic monitoring.
+
+`lsmod` 
+check the module loaded
+
 
