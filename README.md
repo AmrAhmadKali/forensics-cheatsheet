@@ -38,7 +38,20 @@ print the kernel messages (kernel ring buffer) with the word sda (meaning the dr
 `modprobe usbmon`
 Loads the usbmon kernel module to enable USB traffic monitoring.
 
-`lsmod` 
-check the module loaded
+`lsmod | grep usbmon` 
+check the modules loaded and grap the info about usbmon module
+
+`lsusb`
+list usb devices
+
+`lshw -businfo -class disk`
+list hardware with the options -class disk; list all disks
+
+
+`lshw -businfo -class storage`
+list hardware with the options -businfo;print bus info. and the option -class storage print storage devices
+
+`hdparm -I /dev/sda`
+get/set SATA/IDE device parameters with the option -I; get identification info directly from the drive which is displayed in an expanded format.
 
 
